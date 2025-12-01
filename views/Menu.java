@@ -26,14 +26,15 @@ public class Menu {
         }
     }
 
-    public int render() throws InvalidInputException{
+    public void render() throws InvalidInputException, Exception{
         System.out.println("Menu: ");
         System.out.println("1. Tambah Device");
         System.out.println("2. Tampilkan Semua Device");
         System.out.println("3. Tampilkan Semua device terurut berdasarkan OS");
         System.out.println("0. Keluar");
         int input = CliUtil.getInt();
-        return input;
+
+        processUserInput(input);
     }
 
     public void processUserInput(int input) throws Exception{

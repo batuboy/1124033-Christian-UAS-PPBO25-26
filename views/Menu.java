@@ -33,8 +33,6 @@ public class Menu {
         System.out.println("3. Tampilkan Semua device terurut berdasarkan OS");
         System.out.println("0. Keluar");
         int input = CliUtil.getInt();
-
-        processUserInput(input);
     }
 
     public void processUserInput(int input) throws Exception{
@@ -68,11 +66,14 @@ public class Menu {
         System.out.println("Masukan Versi: ");
         String version = CliUtil.getString();
 
+        CliUtil.getNext();
+
         switch (input) {
             case 1:
                 devCon.addDevice(nama, devCon.initWindows(version));
                 break;
             case 2:
+
                 System.out.println("Masukan default Environment: (spasi kalo mau default)");
                 String den = CliUtil.getString();
 
@@ -84,6 +85,8 @@ public class Menu {
                 
                 break;
             case 3:
+                CliUtil.getNext();
+
                 System.out.println("Masukan default Environment: (spasi kalo mau default)");
                 String den1 = CliUtil.getString();
 

@@ -11,7 +11,6 @@ public class App {
             try {
                 menu.render();
                 in = CliUtil.getInt();
-
                 menu.processUserInput(in);
             } catch (Exception e) {
             }
